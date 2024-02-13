@@ -1,0 +1,44 @@
+.container {
+  border: 3px solid grey;
+  border-radius: 10px;
+  background-color: beige;
+  padding-top: 10px;
+}
+
+.userContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.avatar {
+  background-color: darkblue;
+  border-radius: 50%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cornflowerblue;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  padding: 10px;
+}
+.item:nth-child(-n + 2) {
+  border-right: 1px solid seashell;
+}
+
+.itemSpan {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: ghostwhite;
+}

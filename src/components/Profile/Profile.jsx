@@ -1,32 +1,48 @@
 import { FiMapPin, FiThumbsUp, FiEye, FiUsers } from "react-icons/fi";
 
-const Profile = ({ username, tag, location, image, stats }) => {
+import css from "./Profile.module.css";
+
+const Profile = ({ name, tag, location, image, stats }) => {
   return (
-    <div>
-      <div>
-        <img src={image} alt="User avatar" width={100} />
-        <p>{username}</p>
+    <div className={css.container}>
+      <div className={css.userContainer}>
+        <img src={image} alt="User avatar" width={100} className={css.avatar} />
+        <h2>{name}</h2>
         <p>@{tag}</p>
         <p>
           <FiMapPin />
           {location}
         </p>
       </div>
-      <ul>
-        <li>
-          <FiUsers />
-          <span>Followers</span>
-          <span>{stats.followers}</span>
+      <ul className={css.list}>
+        <li className={css.item}>
+          <span className={css.itemSpan}>
+            {" "}
+            <FiUsers />
+            Followers
+          </span>
+          <span>
+            <b>{stats.followers}</b>
+          </span>
         </li>
-        <li>
-          <FiEye />
-          <span>Views</span>
-          <span>{stats.views}</span>
+        <li className={css.item}>
+          <span className={css.itemSpan}>
+            {" "}
+            <FiEye /> Views
+          </span>
+          <span>
+            <b>{stats.views}</b>
+          </span>
         </li>
-        <li>
-          <FiThumbsUp />
-          <span>Likes</span>
-          <span>{stats.likes}</span>
+        <li className={css.item}>
+          <span className={css.itemSpan}>
+            {" "}
+            <FiThumbsUp />
+            Likes
+          </span>
+          <span>
+            <b>{stats.likes}</b>
+          </span>
         </li>
       </ul>
     </div>
