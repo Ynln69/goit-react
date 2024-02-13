@@ -1,0 +1,13 @@
+.table {
+  border: 1px solid black;
+}
+.thead {
+  background-color: slategrey;
+}
+
+.td {
+  padding: 1px 40px;
+}
+.tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
